@@ -28,7 +28,7 @@ export const buildPieChartConfig = (labels: string[] = [], name: string) => {
       fontFamily: 'Roboto, sans-serif',
       fontSize: '18px',
       markers: {
-        offsetX: -8
+        offsetX: -12
       },
       itemMargin: {
         horizontal: 5,
