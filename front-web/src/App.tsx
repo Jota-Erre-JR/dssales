@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/header';
 import Filter from './components/filter';
@@ -7,14 +7,21 @@ import SalesSummary from './components/sales-summary';
 import PieChartCard from './components/pie-chart-card';
 import SalesTable from './components/sales-table';
 import SalesByDateComponent from './components/sales-by-date';
+import { FilterData } from './types';
 
 function App() {
+  const [filterData, setFilterData] = useState<FilterData>();
+
+  const onFilterChange = (filter: FilterData) => {
+    setFilterData(filter);
+  };
+
   return (
     <>
       <Header />
       <div className="app-container">
-        <Filter />
-        <SalesByDateComponent />
+        <Filter onFilterChange={onFilterChange} />
+        <SalesByDateComponent filterData={filterData} />
         <div className="sales-overview-container">
           <SalesSummary />
           <PieChartCard
