@@ -2,10 +2,11 @@ import React from 'react';
 import './App.css';
 import Header from './components/header';
 import Filter from './components/filter';
-import SalesByDate from './components/sales-by-date';
+
 import SalesSummary from './components/sales-summary';
 import PieChartCard from './components/pie-chart-card';
 import SalesTable from './components/sales-table';
+import SalesByDateComponent from './components/sales-by-date';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Header />
       <div className="app-container">
         <Filter />
-        <SalesByDate />
+        <SalesByDateComponent />
         <div className="sales-overview-container">
           <SalesSummary />
           <PieChartCard
