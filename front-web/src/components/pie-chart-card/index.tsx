@@ -5,12 +5,12 @@ import React from 'react';
 import { buildPieChartConfig } from './helpers';
 
 type Props = {
-  labels: string[];
+  labels?: string[];
   name: string;
-  series: number[];
+  series?: number[];
 };
 
-function PieChartCard({ labels, name, series }: Props) {
+function PieChartCard({ labels = [], name, series = [] }: Props) {
   return (
     <div className="pie-chart-card base-card">
       <ReactApexChart
