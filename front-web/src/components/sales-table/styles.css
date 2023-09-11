@@ -1,5 +1,5 @@
 .sales-table-container {
-  height: 600px;
+  height: auto;
   margin-bottom: 50px;
   padding: 30px 35px;
 }
@@ -19,16 +19,21 @@
   text-align: left;
   height: 55px;
   font-size: 16px;
+}
+
+.sales-table thead th:first-of-type {
   padding-left: 30px;
 }
 
 .sales-table tbody td {
   text-align: left;
   height: 55px;
-  padding-left: 30px;
   border-top: 1px solid var(--gray-light-75-color);
-  font-size: 18px;
+  font-size: 16px;
   transition: background 0.3s;
+}
+.sales-table tbody td:first-of-type {
+  padding-left: 30px;
 }
 
 .sales-table tbody tr:hover > td {
